@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1423" />
+  <title>CoolSight | Cooling Tower Operations</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-icon">❄</div><div><strong>CoolSight<span class="brand-dot">.</span></strong><small>INDUSTRIAL INTELLIGENCE</small></div></div>
+      <div class="site-select"><div class="site-icon">▦</div><div><small>ACTIVE FACILITY</small><strong id="siteName">West Plant · Mumbai</strong></div><span>⌄</span></div>
+      <div class="menu-label">WORKSPACE</div>
+      <nav id="navigation">
+        <button data-page="overview" class="nav-link active"><span class="nav-icon">▦</span>Overview</button>
+        <button data-page="towers" class="nav-link"><span class="nav-icon">▤</span>Cooling Towers<span id="towerCount" class="nav-count">5</span></button>
+        <button data-page="alerts" class="nav-link"><span class="nav-icon">♢</span>Alert Center<span id="alertCount" class="nav-count alert-count">3</span></button>
+        <button data-page="maintenance" class="nav-link"><span class="nav-icon">⚒</span>Maintenance</button>
+        <button data-page="analytics" class="nav-link"><span class="nav-icon">⌁</span>Analytics</button>
+        <button data-page="reports" class="nav-link"><span class="nav-icon">▣</span>Reports</button>
+      </nav>
+      <div class="menu-label second-label">ADMINISTRATION</div>
+      <nav><button data-page="settings" class="nav-link"><span class="nav-icon">⚙</span>Settings</button></nav>
+      <div class="sidebar-bottom"><div class="live-pulse"></div><div><strong>Demo environment</strong><small>Simulated telemetry · no live devices</small></div></div>
+      <div class="sidebar-foot">© 2026 CoolSight · Demo v1.0</div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="top-left"><button class="mobile-menu" id="mobileMenu" aria-label="Toggle menu">☰</button><div class="breadcrumb">Operations <span>/</span> <strong id="currentPageName">Overview</strong></div></div>
+        <div class="top-actions"><span class="connection"><i></i> Demo data streaming</span><span class="time-label" id="clock"></span><button class="top-icon" id="globalAlerts" title="View alerts">♧<b id="bellDot"></b></button><div class="avatar" title="Demo administrator">AD</div></div>
+      </header>
+      <main id="pageContent" class="main-content"></main>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <div id="modalRoot"></div>
+  <script src="app.js"></script>
+</body>
+</html>
